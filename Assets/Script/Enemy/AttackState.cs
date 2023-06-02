@@ -62,7 +62,7 @@ public class AttackState : BaseState
         Vector3 shootDirection = (enemy.Player.transform.position - gunbarrel.transform.position).normalized;
         bullet.GetComponent<Rigidbody>().velocity = shootDirection * 50;
         
-        Debug.Log("Shoot");
+        
         shotTimer= 0;
     }
 

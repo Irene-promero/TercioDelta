@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     private float health;
     private float lerpTimer;
-    public float maxHealth = 100;
+    public float maxHealth = 200f;
     public float chipSpeed = 2f;
     public Image frontHealthBar;
     public Image backHealthBar;
@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
+        health = maxHealth - 30f;
         
     }
     // Update is called once per frame
@@ -63,11 +63,21 @@ public class PlayerHealth : MonoBehaviour
     {
         health -=damage;
         lerpTimer = 0f;
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 
     public void RestoreHealth(float healAmount)
     {
         health += healAmount;
         lerpTimer = 0f;
+    }
+
+    private void Die()
+    {
+        // Handle player death (e.g., game over, reset level, etc.)
+        Debug.Log("Player died!");
     }
 }
