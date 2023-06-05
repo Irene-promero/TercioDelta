@@ -13,6 +13,7 @@ public class Target2 : MonoBehaviour
     public void TakeDamage2(float amout)
     {
         health -= amout;
+        FindObjectOfType<AudioManager>().Play("Pop");
         if (health <= 0f)
         { Die2(); }
     }

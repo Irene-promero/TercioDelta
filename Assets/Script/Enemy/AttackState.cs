@@ -34,6 +34,7 @@ public class AttackState : BaseState
             {
                 Shoot();
                 base.ShootAudioEnemy();
+               
             }
             if(moveTimer > Random.Range(3, 7))
             {

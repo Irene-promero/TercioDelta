@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class Target3 : MonoBehaviour
 {
     public GameObject destroyedVersion;
     // Start is called before the first frame update
@@ -8,16 +8,16 @@ public class Target : MonoBehaviour
 
 
 
-    public void TakeDamage (float amout)
-    {  health -= amout;
-        FindObjectOfType<AudioManager>().Play("PainAudio");
+    public void TakeDamage(float amout)
+    {
+        health -= amout;
+        FindObjectOfType<AudioManager>().Play("Pop");
         if (health <= 0f)
         { Die(); }
     }
 
     void Die()
     {
-        FindObjectOfType<AudioManager>().Play("DieEnemy");
         Instantiate(destroyedVersion, transform.position, transform.rotation);
         Destroy(gameObject);
     }

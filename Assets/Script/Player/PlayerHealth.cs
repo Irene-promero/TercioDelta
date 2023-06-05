@@ -62,6 +62,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -=damage;
+        FindObjectOfType<AudioManager>().Play("Pain2");
         lerpTimer = 0f;
         if (health <= 0)
         {

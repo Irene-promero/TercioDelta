@@ -39,6 +39,8 @@ public class PlayerInteract : MonoBehaviour
                 {
                     interactable.BaseInteract();
                     
+                    FindObjectOfType<AudioManager>().Play("Recoger");
+
                 }
             }
         }

@@ -12,10 +12,12 @@ public class BulletEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Apply damage to the player or handle the collision accordingly
+            
             PlayerHealthAttribute playerHealth = collision.gameObject.GetComponent<PlayerHealthAttribute>();
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
+                
             }
         }
 

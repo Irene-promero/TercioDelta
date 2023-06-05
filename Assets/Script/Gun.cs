@@ -81,8 +81,8 @@ public class Gun : MonoBehaviour
 
 
         animator.SetBool("Reloading", false);
-            
-            
+
+            FindObjectOfType<AudioManager>().Play("Reload");
             maxAmmo = maxAmmo - (25 - currentAmmo);
             currentAmmo = currentAmmo + (25 - currentAmmo);
         
