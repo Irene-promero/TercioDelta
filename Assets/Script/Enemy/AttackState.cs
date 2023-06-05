@@ -33,7 +33,7 @@ public class AttackState : BaseState
             if(shotTimer > enemy.fireRate)
             {
                 Shoot();
-                base.ShootAudio();
+                base.ShootAudioEnemy();
             }
             if(moveTimer > Random.Range(3, 7))
             {

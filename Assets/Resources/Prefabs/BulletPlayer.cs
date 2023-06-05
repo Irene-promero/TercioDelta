@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class BulletPlayer : MonoBehaviour
 {
-    Vector3 lastPosition;
-    public float speed = 200f;
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        
-    }
+        Destroy(gameObject);
 
-    // Update is called once per frame
-    void Update()
-    {
-        lastPosition = transform.position;
-        transform.position += transform.forward * speed * Time.deltaTime;
+        // Destroy the bullet on collision with any object
+
     }
 }

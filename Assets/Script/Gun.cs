@@ -58,8 +58,8 @@ public class Gun : MonoBehaviour
             return;
        
         }
-        
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
+
+        if (Input.GetMouseButtonDown(0) && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
@@ -71,10 +71,9 @@ public class Gun : MonoBehaviour
     
     IEnumerator Reload()
     {
-        if (maxAmmo > 0 )
+        if (maxAmmo >= 0)
         { 
         isReloading = true;
-        Debug.Log("Reloading...");
 
         animator.SetBool("Reloading", true);
 

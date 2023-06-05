@@ -9,8 +9,8 @@ public class Ammo : Interactable
     // Start is called before the first frame update
     void Start()
     {
-        _gun = GetComponent<Gun>();
-        _gun = GameObject.Find("M4_Carbine").GetComponent<Gun>();
+        
+ _gun = GameObject.Find("M4_Carbine").GetComponent<Gun>();
 
 
     }

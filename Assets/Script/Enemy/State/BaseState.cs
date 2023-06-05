@@ -10,11 +10,11 @@ public abstract class BaseState
     public abstract void Perform();
     public abstract void Exit();
 
-    protected virtual void ShootAudio()
+    protected virtual void ShootAudioEnemy()
     {
        
         audioManager = GameObject.FindObjectOfType<AudioManager>();
-        audioManager.Play("ShootAudio");
+        audioManager.Play("ShootAudioEnemy");
         if (audioManager == null)
         {
             Debug.LogError("AudioManager not found in the scene!");
