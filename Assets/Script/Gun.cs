@@ -133,6 +133,11 @@ public class Gun : MonoBehaviour
                 {
                     target2.TakeDamage2(damage);
                 }
+                Target3 target3 = hit.transform.GetComponent<Target3>();
+                if (target3 != null)
+                {
+                    target3.TakeDamage3(damage);
+                }
 
 
                 if (hit.rigidbody != null)

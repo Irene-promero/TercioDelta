@@ -10,7 +10,8 @@ public class Ammo : Interactable
     void Start()
     {
         
- _gun = GameObject.Find("M4_Carbine").GetComponent<Gun>();
+  _gun = GameObject.Find("M4_Carbine").GetComponent<Gun>();
+        _gun = GameObject.Find("AK-47").GetComponent<Gun>();
 
 
     }
