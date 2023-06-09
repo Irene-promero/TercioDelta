@@ -9,7 +9,8 @@ public class Target : MonoBehaviour
 
 
     public void TakeDamage (float amout)
-    {  health -= amout;
+    {  
+        health -= amout;
         FindObjectOfType<AudioManager>().Play("PainAudio");
         if (health <= 0f)
         { Die(); }
