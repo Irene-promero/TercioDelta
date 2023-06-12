@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public float chipSpeed = 2f;
     public Image frontHealthBar;
     public Image backHealthBar;
+    public Respawn respawn;
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +80,7 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         // Handle player death (e.g., game over, reset level, etc.)
+        respawn.RespawnHere();
         Debug.Log("Player died!");
     }
 }

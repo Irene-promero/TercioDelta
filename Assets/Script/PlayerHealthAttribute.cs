@@ -28,6 +28,7 @@ public class PlayerHealthAttribute : MonoBehaviour
     {
         // Handle player death (e.g., game over, reset level, etc.)
         Debug.Log("Player died!");
+       
 
     }
 }

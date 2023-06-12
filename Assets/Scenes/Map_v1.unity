@@ -18561,6 +18561,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5762969133372257300, guid: 5ca63cb67a3a33d489f7083daf695f77, type: 3}
+      propertyPath: sprinting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762969133372257300, guid: 5ca63cb67a3a33d489f7083daf695f77, type: 3}
+      propertyPath: lerpCrouch
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5762969133372257311, guid: 5ca63cb67a3a33d489f7083daf695f77, type: 3}
       propertyPath: m_Name
       value: Player
@@ -23607,7 +23615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1823441778
 MonoBehaviour:
   m_ObjectHideFlags: 0
